@@ -1,0 +1,11 @@
+header {
+    padding: 40px;
+    text-align: center;
+    background: gray;
+    color: white;
+  };
+
+.btn:hover {
+    color: beige;
+}
+  
