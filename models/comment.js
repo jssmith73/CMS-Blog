@@ -1,12 +1,12 @@
-const sequelize = require('sequelize');
-const {Model, Datatypes} = require(sequelize);
+const sequelize = require('../config/connection');
+const {Model, DataTypes} = require('sequelize');
 
 class Comment extends Model {}
 
 Comment.init(
     {
         body: {
-            type: Datatypes.STRING,
+            type: DataTypes.STRING,
             allowNull: false
         }
     },
