@@ -1,22 +1,80 @@
+:root {
+  --primary: gray;
+  --secondary: bisque;
+}
+
 header {
     padding: 40px;
     text-align: center;
-    background-color: gray;
+    background-color: var(--primary);
     color: black;
     border: solid 4px black;
     display: flex;
-  };
+  }
 
-.btn:hover {
-    color: beige;
+button:hover {
+    background-color: var(--primary);
+    color:white;
 }
 
 body {
-  background-color: bisque;
+  background-color: var(--secondary);
 }
 
 .login-form {
-  background-color: bisque;
+  background-color: var(--primary);
   color: black;
+  border: solid 4px black;
+  text-align: center;
+  margin: 40px;
+  padding: 15px;
+}
+
+.main-header {
+  margin: 15px;
+  background-color: var(--secondary);
+  border: solid 3px black;
+  border-radius: 20px;
+}
+
+.dashboard-buttons {
+  justify-content: flex-end;
+  position: absolute;
+  right: 25px;
+  top: 100px;
+  justify-content: space-around;
+}
+
+.btn {
+ align-items: flex-end;
+ width:80px;
+ height: 25px;
+ background-color: var(--secondary);
+ border: solid 2px black;
+ border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 45px;
+  margin: 75px;
 }
   
+h2 {
+  font-size: 40px;
+  text-align: center;
+  background-color: var(--primary);
+  padding: 20px;
+}
+
+.title-headers {
+  border: solid 3px black;
+  border-radius: 20px;
+  width: 25%;
+}
+
+#post-body {
+  border: solid 3px black;
+  border-radius: 10mpx;
+  padding: 15px;
+}

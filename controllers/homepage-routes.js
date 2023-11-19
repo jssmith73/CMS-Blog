@@ -1,18 +1,17 @@
 const router = require('express').Router();
-const { User, Post, Comment} = require('../models')
+const { User, Post, Comment } = require('../models')
 const withAuth = require('../utils/auth')
 
 router.get('/', withAuth, async (req, res) => {
     try {
-        const userData = await User.findAll({
-            atrributes: { exclude: ['password']},
-            order: [['name', 'ASC']],
+        const postData = await Post.findAll({
+            include: [User]
         });
 
-        const users = userData.map((project) => project.get({ plain: true}));
-
+        const posts = postData.map((post) => post.get({ plain: true }));
+        console.log(posts);
         res.render('homepage', {
-            users, 
+            posts,
             logged_in: req.session.logged_in,
         });
     } catch (err) {
@@ -20,15 +19,23 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-    router.get('/login', (req, res) => {
-        // If a session exists, redirect the request to the homepage
-        if (req.session.logged_in) {
-          res.redirect('/');
-          return;
-        }
-      
-        res.render('login');
-      });
-      
+router.get('/login', (req, res) => {
+    // If a session exists, redirect the request to the homepage
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('login');
+});
+
+
+//SIGNUP ROUTE
+
+router.get('/signup', (req, res) => {
+    // If a session exists, redirect the request to the homepage      
+    res.render('signup');
+});
+
 module.exports = router;
-      
+

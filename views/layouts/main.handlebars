@@ -6,18 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CMS Blog</title>
   <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
         <h2 class="main-header">Blog Site</h2>
-        <nav>
+        <nav class="dashboard-buttons">
             <button class="btn">Home</button>
             <button class="btn">Dashboard</button>
+            {{#if logged_out}}
             <button class="btn">Login</button>
+            {{/if}}
 
             <!--Shows logout button only if logged in -->
             {{#if logged_in}}
-            <button class="btn">Logout</button>
+            <button class="btn" id="logout-btn">Logout</button>
             {{/if}}
 
         </nav>
@@ -26,9 +29,8 @@
     <main class="main-cont">
         {{{ body }}}
     </main>
-
-    <footer>
-
-    </footer>
+   {{#if logged_in}}
+   <script src="/js/logout.js"></script>
+   {{/if}}
 </body>
 </html>
