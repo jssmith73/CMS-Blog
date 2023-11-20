@@ -2,13 +2,13 @@ const {Comment} = require('../models');
 
 const commentData = [
     {
-        body: "Comment 1"
+        content: "Comment 1"
     },
     {
-        body: "Comment 2"
+        content: "Comment 2"
     },
     {
-        body: "Comment 3"
+        content: "Comment 3"
     },
 ];
 
