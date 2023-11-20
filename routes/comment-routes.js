@@ -14,3 +14,5 @@ Comment.init(
         sequ
     }
 )
+
+module.exports = router;
