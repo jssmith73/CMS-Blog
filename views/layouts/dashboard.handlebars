@@ -1,7 +1,34 @@
-<h1>Dashboard</h1>
-{{#each posts}} 
-<h2 class="title-headers">{{title}}</h2>
-<div id="post-body">
-<h3>{{{ body }}}</h3>
-</div>
-{{/each}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMS Blog</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=IM+Fell+Double+Pica&family=Oswald:wght@300&display=swap');
+</style>
+</head>
+<body>
+    <header>
+        <h2 class="main-header">Blog Site</h2>
+        <ul>
+            <li class="btn"><a href="/">Home</a></li>
+            <li class="btn"><a href="/dashboard">Dashboard</a>
+            </li>
+            {{#if logged_in}}
+            <li class="btn"><a href="#">Logout</a></li>
+            {{/if}}
+        </ul>
+    </header>
+
+    <main class="main-cont">
+        {{{ body }}}
+    </main>
+   {{#if logged_in}}
+   <script src="/js/logout.js"></script>
+   {{/if}}
+</body>
+</html>
