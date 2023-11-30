@@ -50,8 +50,9 @@ router.get('/post/:id', async (req, res) => {
 
         if (postData) {
 
-            const posts = postData.get({ plain: true });
-            res.render('single-post', { posts, logged_in: req.session.logged_in });
+            const post = postData.get({ plain: true });
+            console.log(post);
+            res.render('single-post', { post, logged_in: req.session.logged_in });
         }
     } catch (err) {
         console.log(err);

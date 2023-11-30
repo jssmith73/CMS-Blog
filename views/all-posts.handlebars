@@ -1,3 +1,9 @@
-{{#each post}}
-{{> post-details}}
+{{#each posts}}
+<h2 class="title-headers">{{title}}</h2>
+<div id="post-body">
+    <a href="/post/{{id}}">
+        <h3>{{content}}</h3>
+        <p id="author-date">{{date_created}}</p>
+    </a>
+</div>
 {{/each}}

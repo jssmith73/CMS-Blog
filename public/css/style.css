@@ -87,6 +87,10 @@ h2 {
   padding: 15px;
 }
 
-#post-body:hover {
+a {
+  color: black;
+}
+
+a:hover {
   opacity: 0.3;
 }

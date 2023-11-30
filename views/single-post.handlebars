@@ -1,10 +1,11 @@
-<h2 class="title-headers">{{posts.title}}</h2>
+<h2 class="title-headers">{{post.title}}</h2>
 <div id="post-body">
-<h3>{{posts.content}}</h3>
-<p id="author-date"><strong>{{posts.user.username}}</strong> -  {{posts.date_created}}</p>
+<h3>{{post.content}}</h3>
+<p id="author-date"><strong>{{post.user_id.username}}</strong> - {{post.date_created}}</p>
 </div>
+
 <section class="comments">
-    {{#each comments}}
-    {{>comment-details}}
+    {{#each post.Comments}}
+    {{> comment-details}}
     {{/each}}
 </section>
