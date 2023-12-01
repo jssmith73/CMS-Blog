@@ -4,7 +4,7 @@ const commentData = [
     {
         content: "Comment 1",
         userId: 1,
-        postId: 1,
+        postId: 2,
     },
     {
         content: "Comment 2",
