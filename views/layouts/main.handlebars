@@ -22,9 +22,8 @@
             <button class="btn"><a href="/dashboard">Dashboard</a></button>
             {{#if logged_in}}
             <button class="btn" id="logout-btn">Logout</button>
-            {{/if}}
-            {{#if logged_out}}
-            <button class="btn"><a href="/login">Login/Signup</a></button>
+            {{else}}
+            <button class="btn"><a href="/login">Login</a></button>
             {{/if}}
         </nav>
     </header>

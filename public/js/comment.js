@@ -5,7 +5,7 @@ const commentFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect the content of the comment from the textarea.
-  const content = document.getElementById('comment-text')
+  const content = document.getElementById('comment-text').value
 
   if (content) {
     // Send a POST request to the '/api/comment' endpoint with the new comment data.
