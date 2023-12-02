@@ -85,6 +85,7 @@ h2 {
   border: solid 3px black;
   border-radius: 10mpx;
   padding: 15px;
+  margin-bottom: 15px;
 }
 
 a {
@@ -93,4 +94,14 @@ a {
 
 a:hover {
   opacity: 0.3;
+}
+
+.card-body {
+  border: solid 3px black;
+  padding: 15px;
+}
+
+.comment-data {
+  font-size: 15px;
+  padding: 10px;
 }

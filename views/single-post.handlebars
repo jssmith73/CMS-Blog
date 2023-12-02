@@ -1,11 +1,18 @@
 <h2 class="title-headers">{{post.title}}</h2>
 <div id="post-body">
-<h3>{{post.content}}</h3>
-<p id="author-date"><strong>{{post.user.username}}</strong> - {{post.date_created}}</p>
+    <h3>{{post.content}}</h3>
+    <p id="author-date"><strong>{{post.user.username}}</strong> - {{post.date_created}}</p>
 </div>
 
 <section class="comments">
     {{#each post.Comments}}
     {{this.content}}
     {{/each}}
+    <input type="hidden" name="post-id" value="{{post.id}}" />
+    <form class="comment-form" action="comment">
+        <h3>Leave a Comment!</h3>
+        <textarea name="comment-field" id="comment-text" cols="60" rows="5"></textarea>
+        <button class="btn" id="submit-btn">Submit</button>
+    </form>
 </section>
+<script src="/js/comment.js"></script>
