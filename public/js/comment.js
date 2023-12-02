@@ -9,7 +9,7 @@ const commentFormHandler = async (event) => {
 
   if (content) {
     // Send a POST request to the '/api/comment' endpoint with the new comment data.
-    const url = `/api/comment/${post_id}`
+    const url = `/api/comment/post/${post_id}`
 
     const response = await fetch(url, {
       method: 'POST',
@@ -39,4 +39,4 @@ const commentFormHandler = async (event) => {
 // Add a submit event listener to the new comment form to trigger the 'commentFormHandler' function.
 document
   .querySelector('.comment-form')
-  .addEventListener('click', commentFormHandler);  
+  .addEventListener('submit', commentFormHandler);
