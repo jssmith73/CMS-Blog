@@ -1,4 +1,4 @@
-const post_id = document.querySelector('input[name="post-id"]').value.trim();
+const postId = document.querySelector('input[name="post-id"]').value.trim();
 
 const commentFormHandler = async (event) => {
   // Prevent the default form submission behavior to handle it with JavaScript.
@@ -9,12 +9,12 @@ const commentFormHandler = async (event) => {
 
   if (content) {
     // Send a POST request to the '/api/comment' endpoint with the new comment data.
-    const url = `/api/comment/post/${post_id}`
+    const url = `/api/comment/post/${postId}`
 
     const response = await fetch(url, {
       method: 'POST',
       body: JSON.stringify({
-        post_id,
+        postId,
         content
       }),
       headers: {
