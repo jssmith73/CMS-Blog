@@ -7,6 +7,7 @@ const commentFormHandler = async (event) => {
   // Collect the content of the comment from the textarea.
   const content = document.getElementById('comment-text').value
 
+
   if (content) {
     // Send a POST request to the '/api/comment' endpoint with the new comment data.
     const url = `/api/comment/post/${postId}`
@@ -15,7 +16,7 @@ const commentFormHandler = async (event) => {
       method: 'POST',
       body: JSON.stringify({
         postId,
-        content
+        content,
       }),
       headers: {
         'Content-Type': 'application/json'
