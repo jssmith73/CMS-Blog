@@ -17,7 +17,20 @@ Comment.init(
                 model: 'post',
                 key: 'id'
             }
-        }
+        },
+        userId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'User',
+                key: 'id',
+            }
+        },
+        dateCreated: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        },
     },
     {
         sequelize

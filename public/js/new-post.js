@@ -5,16 +5,12 @@ const newFormHandler = async (event) => {
     const content = document.querySelector("textarea[name='post-content']").value;
     // Send a POST request to the API endpoint. If successful, redirect to the dashboard page. Otherwise, display the error.
    if (title && content) {
-       const response = await fetch(`/api/post/`, {
-           method: 'POST',
-           body: JSON.stringify({
-               title,
-               content
-           }),
-           headers: {
-               'Content-Type': 'application/json'
-           }
+    const newComment = await Post.create({
+        title: req.body.content,
+        // user_id,
+        content: req.body.content
        });
+       
        if (response.ok) {
            document.location.replace('/dashboard');
        } else {

@@ -5,9 +5,17 @@
 </div>
 
 <section class="comments">
-    {{#each post.Comments}}
+    <fieldset class="comment-fieldset">
+        <legend><strong>Comments</strong></legend>
+        <ul class="comment-list">
+            {{#each post.Comments}}
+            <li>"{{this.content}}" - posted by <strong>{{this.user.username}}</strong>   on {{this.date_created}}</li><br>
+            {{/each}}
+        </ul>
+    </fieldset>
+    {{!-- {{#each post.Comments}}
     {{this.content}}
-    {{/each}}
+    {{/each}} --}}
     <input type="hidden" name="post-id" value="{{post.id}}" />
     <form class="comment-form" action="comment">
         <h3>Leave a Comment!</h3>

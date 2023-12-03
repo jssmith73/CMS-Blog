@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
             where: {
-                user_id: req.session.user_id,
+                userId: req.session.userId,
             }
         })
 
@@ -27,23 +27,23 @@ router.get('/', async (req, res) => {
 
 // GET one post
 
-router.get('/post/:id', async (req, res) => {
-    try {
-        const postData = await Post.findByPk(req.params.id, {
-            include: [
-                {
-                    model: Comment,
-                    attributes: ['content']
-                },
-            ],
-        });
+// router.get('/post/:id', async (req, res) => {
+//     try {
+//         const postData = await Post.findByPk(req.params.id, {
+//             include: [
+//                 {
+//                     model: Comment,
+//                     attributes: ['content']
+//                 },
+//             ],
+//         });
 
-        const posts = postData.get({ plain: true });
-        res.render('homepage', { posts, logged_in: req.session.logged_in });
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
+//         const posts = postData.get({ plain: true });
+//         res.render('homepage', { posts, logged_in: req.session.logged_in });
+//     } catch (err) {
+//         console.log(err);
+//         res.status(500).json(err);
+//     }
+// });
 
 module.exports = router;

@@ -105,3 +105,12 @@ a:hover {
   font-size: 15px;
   padding: 10px;
 }
+
+.comment-list {
+  padding: 15px;
+  list-style: none;
+}
+
+.comment-fieldset {
+  border: solid 3px black;
+}
