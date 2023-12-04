@@ -1,0 +1,15 @@
+{{#each posts}}
+<h2 class="title-headers">{{title}}</h2>
+<div id="post-body">
+    <a href="/post/{{id}}">
+        <h3>{{content}}</h3>
+        <p id="author-date">{{date_created}}</p>
+    </a>
+</div>
+{{/each}}
+
+<form class="comment-form" action="comment">
+        <h3>New Post</h3>
+        <textarea name="comment-field" id="comment-text" cols="60" rows="5"></textarea>
+        <button class="btn" id="submit-btn">Submit</button>
+    </form>
