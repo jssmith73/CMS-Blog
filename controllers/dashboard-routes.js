@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
             where: {
-                userId: req.session.userId,
+                user_id: req.session.user_id,
             }
         })
 
@@ -18,11 +18,11 @@ router.get('/', async (req, res) => {
         res.render('user-dashboard', {
             layout: 'dashboard',
             posts,
-            logged_in: req.session.logged_in
+            logged_in: true
         })
 
     } catch (err) {
-        res.redirect('login')
+        res.redirect('login');
     }
 });
 
