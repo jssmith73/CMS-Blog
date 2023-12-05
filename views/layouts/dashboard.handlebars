@@ -14,13 +14,16 @@
 <body>
     <header>
         <h2 class="main-header">Dashboard</h2>
-        <button class="btn"><a href="/">Home</a></button>
+        <nav class="dashboard-buttons">
+            
+            <button class="btn"><a href="/">Home</a></button>
             <button class="btn"><a href="/dashboard">Dashboard</a></button>
             {{#if logged_in}}
             <button class="btn" id="logout-btn">Logout</button>
             {{else}}
             <button class="btn"><a href="/login">Login</a></button>
             {{/if}}
+        </nav>
     </header>
 
     <main class="main-cont">
