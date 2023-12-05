@@ -60,6 +60,7 @@ body {
   background-color: var(--secondary);
   border: solid 2px black;
   border-radius: 20px;
+  font-weight: 400;
 }
 
 h1 {
