@@ -2,13 +2,13 @@
     <h2>Edit Post</h2>
     <form id="post-edit">
         <div>
-            <label for="title">Title</label>
+            <h3>Title</h3>
             <input type="text" name="post-title" value="{{post.title}}">
         </div>
         <div>
-            <label for="content">Content</label>
+            <h3>Content</h3>
             <textarea name="post-content" id="post-content" cols="30" rows="10">{{post.content}}</textarea>
-        </div>
+        </div><br>
         <button type="submit">Save Changes</button>
         <button type="button" id="delete-post">Delete Post</button>
         <input type="hidden" name="post-id" value="{{post.id}}">
