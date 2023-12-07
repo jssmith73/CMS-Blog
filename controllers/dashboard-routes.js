@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/dashboard', (req, res) => {
+router.get('/new-post', (req, res) => {
     res.render('new-post')
 });
 
