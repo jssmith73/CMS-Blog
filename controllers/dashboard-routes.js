@@ -30,4 +30,8 @@ router.get('/new-post', (req, res) => {
     res.render('new-post')
 });
 
+router.get('/edit-post', (req, res) => {
+    res.render('edit-post')
+});
+
 module.exports = router;
