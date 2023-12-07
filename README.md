@@ -19,7 +19,17 @@
 
 ## Installation:
 
-    User must install inquirer. In the terminal run the following command: "npm i inquirer@8.2.4"
+    User must install:
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.3",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5"
+
 
 ## Usage:
 
